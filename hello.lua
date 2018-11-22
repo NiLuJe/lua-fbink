@@ -5,8 +5,10 @@ Barebones example of FBInk usage through LuaJIT's FFI module
 
 local ffi = require("ffi")
 local C = ffi.C
--- Load the prepared declarations (built from  FBInk/ffi/fbink_decl.c via https://github.com/koreader/ffi-cdecl)
+
+-- Load the prepared declarations (built from FBInk/ffi/fbink_decl.c via https://github.com/koreader/ffi-cdecl)
 local _ = require("ffi/fbink_h")
+
 -- And load the actual FBInk library...
 -- Either by specifying a filepath:
 --local fbink = ffi.load("lib/libfbink.so.1.0.0")
