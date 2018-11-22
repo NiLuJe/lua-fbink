@@ -7,8 +7,14 @@ local ffi = require("ffi")
 local C = ffi.C
 -- Load the prepared declarations (built from  FBInk/ffi/fbink_decl.c via https://github.com/koreader/ffi-cdecl)
 local _ = require("ffi/fbink_h")
--- And load the actual library
-local fbink = ffi.load("lib/libfbink.so")
+-- And load the actual FBInk library...
+-- Either by specifying a filepath:
+--local fbink = ffi.load("lib/libfbink.so.1.0.0")
+-- Or by letting the dynamic loader figure it out ;).
+local fbink = ffi.load("fbink")
+
+-- Let's check which FBInk version we're using...
+print("Loaded FBInk " .. ffi.string(fbink.fbink_version()))
 
 -- And now we're good to go! Let's print "Hello World" in the center of the screen...
 -- Setup the config...
