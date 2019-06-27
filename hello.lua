@@ -11,7 +11,7 @@ local _ = require("ffi/fbink_h")
 
 -- And load the actual FBInk library...
 -- Either by specifying a filepath:
---local FBInk = ffi.load("lib/libFBInk.so.1.0.0")
+--local FBInk = ffi.load("lib/libfbink.so.1.0.0")
 -- Or by letting the dynamic loader figure it out ;).
 local FBInk = ffi.load("fbink")
 
