@@ -207,12 +207,7 @@ typedef struct {
   bool to_syslog;
 } FBInkConfig;
 typedef struct {
-  struct {
-    void *regular;
-    void *italic;
-    void *bold;
-    void *bold_italic;
-  } font;
+  void *font;
   struct {
     short int top;
     short int bottom;
