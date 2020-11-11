@@ -290,4 +290,6 @@ int fbink_free_dump_data(FBInkDump *restrict);
 FBInkRect fbink_get_last_rect(void);
 int fbink_button_scan(int, bool, bool);
 int fbink_wait_for_usbms_processing(int, bool);
+uint8_t fbink_rota_native_to_canonical(uint32_t);
+uint32_t fbink_rota_canonical_to_native(uint8_t);
 ]]
